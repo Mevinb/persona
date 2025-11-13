@@ -1,0 +1,152 @@
+# NOVA Configuration File
+# ========================
+# Central configuration for all NOVA components
+
+# Model Configuration
+model:
+  name: "mistralai/Mistral-7B-v0.1"  # Model name from Hugging Face
+  max_tokens: 512                     # Maximum tokens to generate
+  temperature: 0.7                    # Creativity level (0.1-1.0)
+  quantization: true                  # Enable 4-bit quantization for memory efficiency
+  device: "auto"                      # Device selection: auto, cpu, cuda
+
+# Audio Configuration
+audio:
+  sample_rate: 16000                  # Audio sample rate (Hz)
+  channels: 1                         # Number of audio channels (mono)
+  input_device: null                  # Microphone device ID (null = default)
+  output_device: null                 # Speaker device ID (null = default)
+
+# Whisper Speech-to-Text Configuration
+whisper:
+  model_size: "base"                  # Model size: tiny, base, small, medium, large
+  device: "cpu"                       # Device for Whisper: cpu, cuda
+  language: "en"                      # Language code for transcription
+  compute_type: "float32"             # Computation type: float32, float16, int8
+
+# Text-to-Speech Configuration
+voice:
+  enabled: true                       # Enable voice output
+  voice_id: null                      # Specific voice ID (null = auto-select)
+  gender: "female"                    # Preferred voice gender: male, female
+  rate: 180                          # Speech rate (words per minute)
+  volume: 0.8                        # Voice volume (0.0-1.0)
+
+# Listening Configuration
+listening:
+  wake_word: "nova"                   # Wake word to activate listening
+  timeout: 5.0                       # Maximum recording time (seconds)
+  silence_threshold: 2.0              # Silence duration to stop recording (seconds)
+  energy_threshold: 300               # Minimum audio energy to detect speech
+  continuous_mode: false              # Always listen vs wake word activation
+
+# Memory Configuration
+memory:
+  database_path: "data/memory.db"     # SQLite database file path
+  max_session_history: 50             # Maximum messages in session memory
+  max_stored_memories: 10000          # Maximum stored conversation memories
+  auto_save_interval: 300             # Auto-save interval (seconds)
+  importance_threshold: 2             # Minimum importance to store (1-5)
+
+# Intent Recognition Configuration
+intents:
+  confidence_threshold: 0.3           # Minimum confidence to execute intent
+  max_retries: 3                     # Maximum retries for failed actions
+  
+  # Application mappings (add your custom applications here)
+  applications:
+    chrome: "chrome.exe"
+    firefox: "firefox.exe"
+    edge: "msedge.exe"
+    notepad: "notepad.exe"
+    calculator: "calc.exe"
+    vscode: "code.exe"
+    explorer: "explorer.exe"
+    cmd: "cmd.exe"
+    powershell: "powershell.exe"
+  
+  # Custom intent patterns (regex patterns)
+  patterns:
+    custom_greeting:
+      - "hey nova"
+      - "hello nova"
+    custom_goodbye:
+      - "bye nova"
+      - "see you nova"
+
+# User Interface Configuration
+ui:
+  default_interface: "text"           # Default UI: text, voice, hybrid
+  show_timestamps: true               # Show timestamps in text UI
+  use_colors: true                   # Use colored output in text UI
+  log_conversations: true             # Log conversations to file
+  
+# Logging Configuration
+logging:
+  level: "INFO"                      # Log level: DEBUG, INFO, WARNING, ERROR
+  file_path: "data/nova.log"         # Log file path
+  max_file_size: "10MB"              # Maximum log file size
+  backup_count: 3                    # Number of log file backups
+  console_logging: true              # Enable console logging
+
+# API Configuration (for future extensions)
+api:
+  weather_api_key: null              # OpenWeatherMap API key
+  news_api_key: null                 # News API key
+  translate_api_key: null            # Translation API key
+
+# Security Configuration
+security:
+  enable_command_whitelist: true      # Only allow whitelisted system commands
+  allowed_commands:                   # Whitelisted commands
+    - "dir"
+    - "ls"
+    - "pwd"
+    - "whoami"
+    - "date"
+    - "time"
+  max_file_size: "10MB"              # Maximum file size for operations
+  restricted_paths:                   # Paths to restrict access
+    - "C:\\Windows\\System32"
+    - "/etc"
+    - "/var"
+
+# Performance Configuration
+performance:
+  max_concurrent_requests: 5          # Maximum concurrent processing requests
+  response_timeout: 30                # Response timeout (seconds)
+  memory_cleanup_interval: 1800       # Memory cleanup interval (seconds)
+  cache_enabled: true                 # Enable response caching
+  cache_size: 100                     # Maximum cached responses
+
+# Fine-tuning Configuration (for future use)
+fine_tuning:
+  dataset_path: "fine_tune/dataset.jsonl"
+  output_dir: "fine_tune/models"
+  learning_rate: 0.0002
+  batch_size: 4
+  num_epochs: 3
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.1
+
+# Backup and Recovery
+backup:
+  auto_backup: true                   # Enable automatic backups
+  backup_interval: "daily"            # Backup interval: daily, weekly, monthly
+  backup_location: "data/backups"     # Backup directory
+  max_backups: 7                     # Maximum number of backups to keep
+
+# Experimental Features
+experimental:
+  enable_emotion_detection: false     # Detect user emotions
+  enable_context_learning: true       # Learn from conversation context
+  enable_proactive_suggestions: false # Suggest actions proactively
+  enable_multi_language: false        # Support multiple languages
+
+# Development Settings
+development:
+  debug_mode: false                   # Enable debug mode
+  mock_responses: false               # Use mock responses for testing
+  verbose_logging: false              # Enable verbose logging
+  profiling_enabled: false            # Enable performance profiling

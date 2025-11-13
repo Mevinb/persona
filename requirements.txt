@@ -1,0 +1,51 @@
+# NOVA Personal AI Assistant - Requirements
+# ========================================
+
+# Core AI and ML libraries
+torch>=2.0.0
+transformers>=4.35.0
+accelerate>=0.24.0
+bitsandbytes>=0.41.0
+sentencepiece>=0.1.99
+
+# Speech and Audio
+faster-whisper>=0.9.0
+pyttsx3>=2.90
+sounddevice>=0.4.6
+webrtcvad>=2.0.10
+numpy>=1.24.0
+
+# Fine-tuning
+peft>=0.6.0
+datasets>=2.14.0
+trl>=0.7.0
+
+# Configuration and Data
+PyYAML>=6.0.1
+colorama>=0.4.6
+
+# Optional: Advanced TTS (uncomment if desired)
+# coqui-tts>=0.17.0
+# espeak-ng>=1.51
+
+# Optional: Vector database for advanced memory (uncomment if desired)
+# chromadb>=0.4.0
+# sentence-transformers>=2.2.0
+
+# Development and Testing
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Platform-specific dependencies (Windows)
+# pywin32>=306  # Uncomment on Windows for system integration
+
+# GPU Support (choose one based on your system)
+# For CUDA 11.8
+# torch-audio>=2.0.0+cu118 --index-url https://download.pytorch.org/whl/cu118
+
+# For CUDA 12.1  
+# torch-audio>=2.0.0+cu121 --index-url https://download.pytorch.org/whl/cu121
+
+# For CPU-only (smaller download, slower inference)
+# torch-audio>=2.0.0+cpu --index-url https://download.pytorch.org/whl/cpu
