@@ -1,7 +1,7 @@
 """
-NOVA Text UI Module
+ARK Text UI Module
 ==================
-Provides command-line interface for interacting with NOVA when voice I/O is not available.
+Provides command-line interface for interacting with ARK when voice I/O is not available.
 Includes conversation history, commands, and interactive features.
 """
 
@@ -22,11 +22,11 @@ colorama.init(autoreset=True)
 
 class TextUI:
     """
-    Command-line interface for NOVA assistant.
+    Command-line interface for ARK assistant.
     Provides interactive text-based conversation and system commands.
     """
     
-    def __init__(self, name: str = "Nova"):
+    def __init__(self, name: str = "Ark"):
         """
         Initialize the Text UI.
         
@@ -463,7 +463,7 @@ if __name__ == "__main__":
         """Handle exit."""
         print("Cleanup completed.")
     
-    ui = TextUI("TestNova")
+    ui = TextUI("TestArk")
     
     try:
         ui.start(

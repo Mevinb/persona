@@ -1,7 +1,7 @@
 """
-NOVA Core Module
+ARK Core Module
 ================
-Core components for the NOVA personal AI assistant.
+Core components for the ARK personal AI assistant.
 """
 
 from .brain import Brain

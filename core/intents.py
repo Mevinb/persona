@@ -1,5 +1,5 @@
 """
-NOVA Intent Manager Module
+ARK Intent Manager Module
 =========================
 Detects user intents and maps them to specific actions like opening apps,
 setting reminders, fetching information, or performing system tasks.
@@ -29,7 +29,7 @@ class Intent:
 
 class IntentManager:
     """
-    Manages intent recognition and action execution for NOVA.
+    Manages intent recognition and action execution for ARK.
     Maps natural language phrases to specific system actions.
     """
     
@@ -540,7 +540,7 @@ class IntentManager:
     
     def _action_greeting(self, params: Dict[str, str]) -> Tuple[bool, str]:
         """Handle greeting."""
-        return True, "Hello! I'm Nova, your personal assistant. How can I help you today?"
+        return True, "Hello! I'm Ark, your personal assistant. How can I help you today?"
     
     def _action_goodbye(self, params: Dict[str, str]) -> Tuple[bool, str]:
         """Handle goodbye."""

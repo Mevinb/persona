@@ -1,5 +1,5 @@
 """
-NOVA Brain Module
+ARK Brain Module
 ================
 Handles model loading, inference, and response generation using open-source LLMs.
 Supports local models via Transformers library with memory-efficient loading.
@@ -19,7 +19,7 @@ from pathlib import Path
 
 class Brain:
     """
-    Core AI brain for NOVA assistant.
+    Core AI brain for ARK assistant.
     Manages LLM loading, inference, and response generation.
     """
     
@@ -77,7 +77,7 @@ class Brain:
     def _get_default_personality(self) -> Dict[str, Any]:
         """Return default personality traits."""
         return {
-            'name': 'Nova',
+            'name': 'Ark',
             'traits': ['friendly', 'witty', 'loyal', 'curious'],
             'tone': 'conversational',
             'style': 'helpful but not overly formal'
@@ -208,10 +208,10 @@ Keep responses concise but warm and engaging."""
         if context:
             for entry in context[-5:]:  # Last 5 exchanges
                 conversation += f"Human: {entry.get('user', '')}\n"
-                conversation += f"Nova: {entry.get('assistant', '')}\n"
+                conversation += f"Ark: {entry.get('assistant', '')}\n"
         
         # Build complete prompt
-        full_prompt = f"{system_prompt}\n\n{conversation}Human: {user_input}\nNova:"
+        full_prompt = f"{system_prompt}\n\n{conversation}Human: {user_input}\nArk:"
         
         return full_prompt
     
@@ -226,7 +226,7 @@ Keep responses concise but warm and engaging."""
             Cleaned response
         """
         # Remove common artifacts
-        response = response.replace("Nova:", "").strip()
+        response = response.replace("Ark:", "").strip()
         response = response.replace("Human:", "").strip()
         
         # Stop at natural conversation boundaries
@@ -287,12 +287,12 @@ if __name__ == "__main__":
         
         # Test conversation
         response = brain.generate_response("Hello, what's your name?")
-        print(f"Nova: {response}")
+        print(f"Ark: {response}")
         
         # Test with context
         context = [{"user": "Hello, what's your name?", "assistant": response}]
         response2 = brain.generate_response("What can you help me with?", context)
-        print(f"Nova: {response2}")
+        print(f"Ark: {response2}")
         
     else:
         print("Failed to load model")

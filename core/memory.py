@@ -1,5 +1,5 @@
 """
-NOVA Memory Module
+ARK Memory Module
 =================
 Manages conversation history, user preferences, and persistent memory storage.
 Supports both short-term (session) and long-term (persistent) memory using SQLite.
@@ -38,7 +38,7 @@ class MemoryEntry:
 
 class MemoryManager:
     """
-    Manages NOVA's memory system including conversation history,
+    Manages ARK's memory system including conversation history,
     user preferences, and long-term memories.
     """
     
@@ -128,7 +128,7 @@ class MemoryManager:
         
         Args:
             user_input: What the user said
-            assistant_response: How Nova responded
+            assistant_response: How Ark responded
             context: Additional context information
             importance: Importance level (1-5)
             tags: List of relevant tags
@@ -524,7 +524,7 @@ if __name__ == "__main__":
     # Test conversation storage
     memory.add_conversation(
         "Hello, my name is John",
-        "Nice to meet you, John! I'm Nova.",
+        "Nice to meet you, John! I'm Ark.",
         context={"intent": "greeting"},
         importance=3,
         tags=["greeting", "introduction"]

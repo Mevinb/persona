@@ -1,5 +1,5 @@
 """
-NOVA Speaker Module
+ARK Speaker Module
 ==================
 Handles text-to-speech functionality using pyttsx3 and optional TTS models.
 Provides voice synthesis with configurable voice characteristics.
@@ -50,7 +50,7 @@ class SpeechQueue:
 
 class Speaker:
     """
-    Text-to-speech manager for NOVA using pyttsx3 and optional TTS models.
+    Text-to-speech manager for ARK using pyttsx3 and optional TTS models.
     Supports voice customization, speech queuing, and emotion-based speech.
     """
     
@@ -528,7 +528,7 @@ if __name__ == "__main__":
     print(f"\nSpeaker info: {speaker.get_speaker_info()}")
     
     # Test speech
-    speaker.speak("Hello! I'm Nova, your personal assistant. How are you today?")
+    speaker.speak("Hello! I'm Ark, your personal assistant. How are you today?")
     
     time.sleep(3)
     

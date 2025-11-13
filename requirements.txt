@@ -1,4 +1,4 @@
-# NOVA Personal AI Assistant - Requirements
+# ARK Personal AI Assistant - Requirements
 # ========================================
 
 # Core AI and ML libraries

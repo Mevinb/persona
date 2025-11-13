@@ -1,6 +1,6 @@
-# NOVA Configuration File
+# ARK Configuration File
 # ========================
-# Central configuration for all NOVA components
+# Central configuration for all ARK components
 
 # Model Configuration
 model:
@@ -34,7 +34,7 @@ voice:
 
 # Listening Configuration
 listening:
-  wake_word: "nova"                   # Wake word to activate listening
+  wake_word: "ark"                   # Wake word to activate listening
   timeout: 5.0                       # Maximum recording time (seconds)
   silence_threshold: 2.0              # Silence duration to stop recording (seconds)
   energy_threshold: 300               # Minimum audio energy to detect speech
@@ -68,11 +68,11 @@ intents:
   # Custom intent patterns (regex patterns)
   patterns:
     custom_greeting:
-      - "hey nova"
-      - "hello nova"
+      - "hey ark"
+      - "hello ark"
     custom_goodbye:
-      - "bye nova"
-      - "see you nova"
+      - "bye ark"
+      - "see you ark"
 
 # User Interface Configuration
 ui:
@@ -84,7 +84,7 @@ ui:
 # Logging Configuration
 logging:
   level: "INFO"                      # Log level: DEBUG, INFO, WARNING, ERROR
-  file_path: "data/nova.log"         # Log file path
+  file_path: "data/ark.log"         # Log file path
   max_file_size: "10MB"              # Maximum log file size
   backup_count: 3                    # Number of log file backups
   console_logging: true              # Enable console logging

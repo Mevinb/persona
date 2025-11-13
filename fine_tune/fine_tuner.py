@@ -1,8 +1,8 @@
 """
-NOVA Fine-tuning Module
+ARK Fine-tuning Module
 =======================
-Tools and scripts for fine-tuning NOVA's language model with LoRA.
-This module will allow you to customize NOVA's responses based on your preferences.
+Tools and scripts for fine-tuning ARK's language model with LoRA.
+This module will allow you to customize ARK's responses based on your preferences.
 """
 
 import json
@@ -26,9 +26,9 @@ from peft import (
 from datasets import Dataset
 
 
-class NovaFineTuner:
+class ArkFineTuner:
     """
-    Fine-tuning manager for NOVA using LoRA (Low-Rank Adaptation).
+    Fine-tuning manager for ARK using LoRA (Low-Rank Adaptation).
     Allows customization of the assistant's responses while maintaining efficiency.
     """
     
@@ -117,7 +117,7 @@ class NovaFineTuner:
         
         for conv in conversations:
             # Create a prompt-response format
-            prompt = f"Human: {conv['input']}\nNova:"
+            prompt = f"Human: {conv['input']}\nArk:"
             response = conv['output']
             full_text = f"{prompt} {response}<|endoftext|>"
             
@@ -311,8 +311,8 @@ class NovaFineTuner:
         """Create a sample dataset with basic conversation examples."""
         sample_conversations = [
             {
-                "input": "Hello Nova!",
-                "output": "Hello! I'm Nova, your personal AI assistant. How can I help you today?"
+                "input": "Hello Ark!",
+                "output": "Hello! I'm Ark, your personal AI assistant. How can I help you today?"
             },
             {
                 "input": "What can you do?",
@@ -343,13 +343,13 @@ def main():
     """Example usage of the fine-tuning system."""
     logging.basicConfig(level=logging.INFO)
     
-    fine_tuner = NovaFineTuner()
+    fine_tuner = ArkFineTuner()
     
     # Create sample dataset if it doesn't exist
     if not fine_tuner.dataset_path.exists():
         fine_tuner.create_sample_dataset()
     
-    print("NOVA Fine-tuning System")
+    print("ARK Fine-tuning System")
     print("======================")
     print("1. Create sample dataset")
     print("2. Add conversation example")

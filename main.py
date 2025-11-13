@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-NOVA - Personal AI Assistant
+ARK - Personal AI Assistant
 ============================
-Main orchestrator that brings together all NOVA components for a complete
+Main orchestrator that brings together all ARK components for a complete
 personal AI assistant experience.
 
 Author: Your Name
@@ -22,7 +22,7 @@ from typing import Optional, Dict, Any
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
-# Import NOVA components
+# Import ARK components
 from core.brain import Brain
 from core.memory import MemoryManager
 from core.intents import IntentManager
@@ -38,15 +38,15 @@ from colorama import Fore, Style
 colorama.init(autoreset=True)
 
 
-class NovaAssistant:
+class ArkAssistant:
     """
-    Main NOVA Assistant class that orchestrates all components.
+    Main ARK Assistant class that orchestrates all components.
     Provides voice and text interfaces for interacting with the AI.
     """
     
     def __init__(self, config_path: str = "data/config.yaml"):
         """
-        Initialize NOVA Assistant.
+        Initialize ARK Assistant.
         
         Args:
             config_path: Path to configuration file
@@ -76,7 +76,7 @@ class NovaAssistant:
         ui_config = self.config.get('ui', {})
         self.default_interface = ui_config.get('default_interface', 'text')
         
-        self.logger.info("NOVA Assistant initialized")
+        self.logger.info("ARK Assistant initialized")
     
     def _setup_logging(self):
         """Setup logging configuration."""
@@ -91,7 +91,7 @@ class NovaAssistant:
             level=log_level,
             format=log_format,
             handlers=[
-                logging.FileHandler(log_dir / "nova.log"),
+                logging.FileHandler(log_dir / "ark.log"),
                 logging.StreamHandler()
             ]
         )
@@ -112,13 +112,13 @@ class NovaAssistant:
     
     def initialize_components(self) -> bool:
         """
-        Initialize all NOVA components.
+        Initialize all ARK components.
         
         Returns:
             True if all components initialized successfully
         """
         try:
-            print(f"{Fore.CYAN}🚀 Initializing NOVA components...{Style.RESET_ALL}")
+            print(f"{Fore.CYAN}🚀 Initializing ARK components...{Style.RESET_ALL}")
             
             # Initialize Memory Manager
             print(f"{Fore.YELLOW}📚 Initializing Memory Manager...{Style.RESET_ALL}")
@@ -155,7 +155,7 @@ class NovaAssistant:
             
             # Initialize Text UI
             print(f"{Fore.YELLOW}💬 Initializing Text Interface...{Style.RESET_ALL}")
-            self.text_ui = TextUI("Nova")
+            self.text_ui = TextUI("Ark")
             print(f"{Fore.GREEN}✓ Text Interface ready{Style.RESET_ALL}")
             
             print(f"{Fore.GREEN}🎉 All components initialized successfully!{Style.RESET_ALL}\n")
@@ -168,7 +168,7 @@ class NovaAssistant:
     
     def start(self, interface: str = None):
         """
-        Start the NOVA Assistant.
+        Start the ARK Assistant.
         
         Args:
             interface: Interface mode ('text', 'voice', 'hybrid')
@@ -204,8 +204,8 @@ class NovaAssistant:
             self.stop()
     
     def stop(self):
-        """Stop the NOVA Assistant and cleanup resources."""
-        print(f"{Fore.CYAN}🛑 Shutting down NOVA...{Style.RESET_ALL}")
+        """Stop the ARK Assistant and cleanup resources."""
+        print(f"{Fore.CYAN}🛑 Shutting down ARK...{Style.RESET_ALL}")
         
         self.is_running = False
         
@@ -224,7 +224,7 @@ class NovaAssistant:
         if self.brain:
             self.brain.unload_model()
         
-        print(f"{Fore.GREEN}✅ NOVA shutdown complete{Style.RESET_ALL}")
+        print(f"{Fore.GREEN}✅ ARK shutdown complete{Style.RESET_ALL}")
     
     def _signal_handler(self, signum, frame):
         """Handle system signals for graceful shutdown."""
@@ -234,7 +234,7 @@ class NovaAssistant:
     
     def _start_text_mode(self):
         """Start text-only interface."""
-        print(f"{Fore.CYAN}💬 Starting NOVA in text mode...{Style.RESET_ALL}\n")
+        print(f"{Fore.CYAN}💬 Starting ARK in text mode...{Style.RESET_ALL}\n")
         
         self.text_ui.start(
             on_user_input=self._handle_user_input,
@@ -248,7 +248,7 @@ class NovaAssistant:
             print(f"{Fore.RED}❌ Voice recognition not available{Style.RESET_ALL}")
             return self._start_text_mode()
         
-        print(f"{Fore.CYAN}🎙️ Starting NOVA in voice mode...{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}🎙️ Starting ARK in voice mode...{Style.RESET_ALL}")
         print(f"{Fore.YELLOW}Say '{self.listener.wake_word}' to activate listening{Style.RESET_ALL}\n")
         
         self.voice_mode = True
@@ -268,7 +268,7 @@ class NovaAssistant:
     
     def _start_hybrid_mode(self):
         """Start hybrid text/voice interface."""
-        print(f"{Fore.CYAN}🎙️💬 Starting NOVA in hybrid mode...{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}🎙️💬 Starting ARK in hybrid mode...{Style.RESET_ALL}")
         print(f"{Fore.YELLOW}Use text input or say '{self.listener.wake_word}' for voice{Style.RESET_ALL}\n")
         
         # Start voice listening in background
@@ -347,7 +347,7 @@ class NovaAssistant:
         
         # Speak the response
         if self.speaker and response:
-            print(f"{Fore.BLUE}Nova: {response}{Style.RESET_ALL}")
+            print(f"{Fore.BLUE}Ark: {response}{Style.RESET_ALL}")
             self.speaker.speak(response)
     
     def _handle_system_command(self, command: str, args: list) -> str:
@@ -421,7 +421,7 @@ class NovaAssistant:
         memory_stats = self.memory.get_memory_stats() if self.memory else {}
         
         status = f"""
-NOVA System Status:
+ARK System Status:
 • Brain: {'✓ Loaded' if brain_info.get('loaded') else '❌ Not loaded'}
 • Model: {brain_info.get('model_name', 'Unknown')}
 • Memory: {memory_stats.get('total_memories', 0)} stored memories
@@ -484,8 +484,8 @@ Known facts about you:
 
 
 def main():
-    """Main entry point for NOVA Assistant."""
-    parser = argparse.ArgumentParser(description="NOVA - Personal AI Assistant")
+    """Main entry point for ARK Assistant."""
+    parser = argparse.ArgumentParser(description="ARK - Personal AI Assistant")
     parser.add_argument(
         "--interface", 
         choices=["text", "voice", "hybrid"], 
@@ -509,17 +509,17 @@ def main():
     if args.debug:
         logging.getLogger().setLevel(logging.DEBUG)
     
-    # Create and initialize NOVA
-    nova = NovaAssistant(args.config)
+    # Create and initialize ARK
+    ark = ArkAssistant(args.config)
     
     # Initialize components
-    if not nova.initialize_components():
-        print(f"{Fore.RED}❌ Failed to initialize NOVA components{Style.RESET_ALL}")
+    if not ark.initialize_components():
+        print(f"{Fore.RED}❌ Failed to initialize ARK components{Style.RESET_ALL}")
         sys.exit(1)
     
     # Start the assistant
     try:
-        nova.start(args.interface)
+        ark.start(args.interface)
     except Exception as e:
         print(f"{Fore.RED}❌ Fatal error: {e}{Style.RESET_ALL}")
         sys.exit(1)

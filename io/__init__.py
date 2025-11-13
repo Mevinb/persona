@@ -1,7 +1,7 @@
 """
-NOVA IO Module
+ARK IO Module
 ==============
-Input/Output components for the NOVA personal AI assistant.
+Input/Output components for the ARK personal AI assistant.
 """
 
 from .listener import Listener

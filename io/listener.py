@@ -1,5 +1,5 @@
 """
-NOVA Listener Module
+ARK Listener Module
 ===================
 Handles speech-to-text functionality using faster-whisper for offline voice recognition.
 Provides continuous listening capabilities with configurable wake word detection.
@@ -93,7 +93,7 @@ class VoiceActivityDetector:
 
 class Listener:
     """
-    Voice input manager for NOVA using faster-whisper for offline STT.
+    Voice input manager for ARK using faster-whisper for offline STT.
     Supports continuous listening, wake word detection, and voice activity detection.
     """
     
@@ -119,7 +119,7 @@ class Listener:
         self.language = self.config.get('whisper', {}).get('language', 'en')
         
         # Listening configuration
-        self.wake_word = self.config.get('listening', {}).get('wake_word', 'nova')
+        self.wake_word = self.config.get('listening', {}).get('wake_word', 'ark')
         self.listening_timeout = self.config.get('listening', {}).get('timeout', 5.0)
         self.silence_threshold = self.config.get('listening', {}).get('silence_threshold', 2.0)
         self.energy_threshold = self.config.get('listening', {}).get('energy_threshold', 300)

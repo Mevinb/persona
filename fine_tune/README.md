@@ -1,11 +1,11 @@
-# NOVA Fine-tuning README
+# ARK Fine-tuning README
 # ======================
 
-This directory contains tools and resources for fine-tuning NOVA's language model to better match your personal preferences and communication style.
+This directory contains tools and resources for fine-tuning ARK's language model to better match your personal preferences and communication style.
 
 ## Overview
 
-NOVA uses LoRA (Low-Rank Adaptation) for efficient fine-tuning, which allows you to customize the assistant's responses without requiring massive computational resources.
+ARK uses LoRA (Low-Rank Adaptation) for efficient fine-tuning, which allows you to customize the assistant's responses without requiring massive computational resources.
 
 ## Files
 
@@ -17,14 +17,14 @@ NOVA uses LoRA (Low-Rank Adaptation) for efficient fine-tuning, which allows you
 
 ### 1. Prepare Your Dataset
 
-Edit `dataset.jsonl` to include examples of how you want NOVA to respond. The format is:
+Edit `dataset.jsonl` to include examples of how you want ARK to respond. The format is:
 
 ```json
 {
   "conversations": [
     {
       "input": "User says this",
-      "output": "NOVA should respond like this"
+      "output": "ARK should respond like this"
     }
   ]
 }

@@ -1,4 +1,4 @@
-# 🚀 NOVA - Personal AI Assistant
+# 🚀 ARK - Personal AI Assistant
 
 A fully local, modular personal AI assistant built in Python that gives you complete control over your AI experience.
 
@@ -17,7 +17,7 @@ A fully local, modular personal AI assistant built in Python that gives you comp
 ## 📁 Project Structure
 
 ```
-nova/
+ark/
 ├── core/                      # Core AI components
 │   ├── brain.py              # LLM loading and inference
 │   ├── memory.py             # Conversation and persistent memory
@@ -30,7 +30,7 @@ nova/
 ├── data/                     # Configuration and databases
 │   ├── config.yaml           # Main configuration
 │   ├── memory.db             # SQLite conversation database
-│   └── nova.log              # Application logs
+│   └── ark.log              # Application logs
 ├── fine_tune/                # Fine-tuning tools and data
 │   ├── dataset.jsonl         # Training conversation examples
 │   ├── fine_tuner.py         # LoRA fine-tuning scripts
@@ -59,7 +59,7 @@ nova/
    pip install -r requirements.txt
    ```
 
-3. **Run NOVA**:
+3. **Run ARK**:
    ```bash
    python main.py
    ```
@@ -78,7 +78,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 ## 🚀 Usage
 
-### Starting NOVA
+### Starting ARK
 
 ```bash
 # Text-only interface (default)
@@ -106,30 +106,30 @@ While in the text interface, you can use these commands:
 - `/voice` - Toggle voice mode
 - `/clear` - Clear screen
 - `/save [filename]` - Save conversation
-- `/exit` or `/quit` - Exit NOVA
+- `/exit` or `/quit` - Exit ARK
 
 ### Natural Language Examples
 
 ```
 You: Hello, what's your name?
-Nova: Hi there! I'm Nova, your personal AI assistant...
+Ark: Hi there! I'm Ark, your personal AI assistant...
 
 You: Open Chrome
-Nova: I'll open Chrome for you right now. *opens Chrome browser*
+Ark: I'll open Chrome for you right now. *opens Chrome browser*
 
 You: Set a reminder to call mom in 2 hours  
-Nova: I'll set a reminder for you to call mom in 2 hours...
+Ark: I'll set a reminder for you to call mom in 2 hours...
 
 You: What's 15 * 8?
-Nova: 15 * 8 = 120
+Ark: 15 * 8 = 120
 
 You: My name is Alex and I'm a software developer
-Nova: Nice to meet you, Alex! I'll remember that you're a software developer...
+Ark: Nice to meet you, Alex! I'll remember that you're a software developer...
 ```
 
 ## ⚙️ Configuration
 
-Edit `data/config.yaml` to customize NOVA's behavior:
+Edit `data/config.yaml` to customize ARK's behavior:
 
 ### Key Settings
 
@@ -148,7 +148,7 @@ voice:
 
 # Listening Settings
 listening:
-  wake_word: "nova"
+  wake_word: "ark"
   continuous_mode: false
 
 # Memory Settings
@@ -159,7 +159,7 @@ memory:
 
 ### Personality Customization
 
-Modify `core/personality.yaml` to change NOVA's personality:
+Modify `core/personality.yaml` to change ARK's personality:
 
 ```yaml
 traits:
@@ -174,7 +174,7 @@ style: "warm but professional"
 
 ## 🎯 Intent System
 
-NOVA can understand and execute various types of commands:
+ARK can understand and execute various types of commands:
 
 ### System Control
 - "open chrome" → Opens Chrome browser
@@ -196,7 +196,7 @@ NOVA can understand and execute various types of commands:
 
 ## 🧠 Memory System
 
-NOVA maintains several types of memory:
+ARK maintains several types of memory:
 
 - **Session Memory**: Current conversation context
 - **Conversation History**: Stored chat logs with importance ratings
@@ -207,7 +207,7 @@ Memory is automatically managed with configurable retention policies.
 
 ## 🔧 Fine-tuning
 
-Customize NOVA's responses using LoRA fine-tuning:
+Customize ARK's responses using LoRA fine-tuning:
 
 1. **Add training examples** to `fine_tune/dataset.jsonl`
 2. **Run fine-tuning**:
@@ -282,7 +282,7 @@ Run with `--debug` for detailed logging:
 python main.py --debug
 ```
 
-Check logs in `data/nova.log` for detailed error information.
+Check logs in `data/ark.log` for detailed error information.
 
 ## 📄 License
 
@@ -300,5 +300,6 @@ Contributions welcome! Please read CONTRIBUTING.md for guidelines.
 
 ---
 
-**Built with ❤️ for AI enthusiasts who value privacy and control.**#   p e r s o n a  
+**Built with ❤️ for AI enthusiasts who value privacy and control.**#   p e r s o n a 
+ 
  
