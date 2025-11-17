@@ -1,0 +1,234 @@
+[
+  {
+    "test_number": 1,
+    "category": "basic_intelligence",
+    "complexity": 1,
+    "input": "Hello ARK, how are you today?",
+    "expected_capabilities": [
+      "greeting_response",
+      "conversational"
+    ],
+    "timestamp": "2025-11-13T18:57:23.870038",
+    "success": true,
+    "response": "I understand that feeling overwhelmed can be really challenging. Let's break this down together. Can you tell me what specific tasks or deadlines are weighing on your mind? I can help you prioritize, create a manageable schedule for today, or find ways to streamline your workflow. Sometimes just organizing everything clearly can make it feel much more manageable.",
+    "response_time": 0.01054525375366211,
+    "quality_score": {
+      "total": 1.0,
+      "capabilities_met": [
+        "greeting_response",
+        "conversational"
+      ],
+      "length_score": 1.0,
+      "structure_score": 0.4
+    },
+    "capabilities_met": [
+      "greeting_response",
+      "conversational"
+    ]
+  },
+  {
+    "test_number": 2,
+    "category": "task_management",
+    "complexity": 3,
+    "input": "Create task: Review quarterly reports by Friday urgent",
+    "expected_capabilities": [
+      "task_creation",
+      "priority_detection",
+      "deadline_parsing"
+    ],
+    "timestamp": "2025-11-13T18:57:24.384221",
+    "success": true,
+    "response": "Task created successfully (ID: 1): : review quarterly reports by friday urgent",
+    "response_time": 0.011665582656860352,
+    "quality_score": {
+      "total": 1.0,
+      "capabilities_met": [
+        "task_creation",
+        "priority_detection",
+        "deadline_parsing"
+      ],
+      "length_score": 0.78,
+      "structure_score": 0.0
+    },
+    "capabilities_met": [
+      "task_creation",
+      "priority_detection",
+      "deadline_parsing"
+    ]
+  },
+  {
+    "test_number": 3,
+    "category": "automation",
+    "complexity": 4,
+    "input": "Start my morning routine",
+    "expected_capabilities": [
+      "automation_execution",
+      "multi_step_planning"
+    ],
+    "timestamp": "2025-11-13T18:57:24.938514",
+    "success": true,
+    "response": "Executed Morning Productivity Setup:\n\u2713 open_calendar: Opened outlook\n\u2713 open_task_manager: Task manager ready\n\u2713 check_emails: Email checked\n\u2713 open_development_environment: Opened code",
+    "response_time": 0.04963278770446777,
+    "quality_score": {
+      "total": 1.0,
+      "capabilities_met": [
+        "automation_execution",
+        "multi_step_planning"
+      ],
+      "length_score": 1.0,
+      "structure_score": 0.0
+    },
+    "capabilities_met": [
+      "automation_execution",
+      "multi_step_planning"
+    ]
+  },
+  {
+    "test_number": 4,
+    "category": "complex_reasoning",
+    "complexity": 5,
+    "input": "I need to organize a team meeting urgently but I'm not sure about everyone's availability",
+    "expected_capabilities": [
+      "problem_analysis",
+      "solution_planning",
+      "context_understanding"
+    ],
+    "timestamp": "2025-11-13T18:57:25.479609",
+    "success": true,
+    "response": "I understand this is urgent. I'll help you organize an effective quarterly results meeting. Let's break this down: First, I need to know your team size and time preferences. Then I'll help you: 1) Find optimal meeting times by checking everyone's availability, 2) Create a comprehensive agenda covering key quarterly metrics, 3) Prepare necessary documents and presentations, 4) Send calendar invites with agenda and prep materials, 5) Set up the meeting room or video conference, 6) Create action items and follow-up tasks. Would you like me to start by helping you draft the agenda and identifying key discussion points?",
+    "response_time": 0.037906646728515625,
+    "quality_score": {
+      "total": 1.0,
+      "capabilities_met": [
+        "problem_analysis",
+        "solution_planning",
+        "context_understanding"
+      ],
+      "length_score": 1.0,
+      "structure_score": 0.4
+    },
+    "capabilities_met": [
+      "problem_analysis",
+      "solution_planning",
+      "context_understanding"
+    ]
+  },
+  {
+    "test_number": 5,
+    "category": "learning",
+    "complexity": 4,
+    "input": "I prefer meetings in the morning and I work on development projects mostly",
+    "expected_capabilities": [
+      "preference_learning",
+      "memory_storage",
+      "pattern_recognition"
+    ],
+    "timestamp": "2025-11-13T18:57:26.011309",
+    "success": true,
+    "response": "Perfect! I've noted your preference for morning meetings and afternoon deep work sessions. This is excellent for productivity since it aligns with natural energy patterns. From now on, when helping you schedule or when someone requests a meeting, I'll prioritize morning slots and protect your afternoon time for focused work. I'll also remind you to block your afternoon calendar for deep work sessions. Should I also note any specific time ranges, like meetings before 11 AM?",
+    "response_time": 0.0286252498626709,
+    "quality_score": {
+      "total": 1.0,
+      "capabilities_met": [
+        "preference_learning",
+        "memory_storage",
+        "pattern_recognition"
+      ],
+      "length_score": 1.0,
+      "structure_score": 0.4
+    },
+    "capabilities_met": [
+      "preference_learning",
+      "memory_storage",
+      "pattern_recognition"
+    ]
+  },
+  {
+    "test_number": 6,
+    "category": "productivity",
+    "complexity": 5,
+    "input": "Analyze my productivity patterns",
+    "expected_capabilities": [
+      "data_analysis",
+      "insight_generation",
+      "personalized_recommendations"
+    ],
+    "timestamp": "2025-11-13T18:57:26.518994",
+    "success": true,
+    "response": "Productivity Analysis:\n\nSession Duration: 0:00:02.669598\nConversations This Session: 3\n\nYour Patterns:\n\u2022 You frequently work on frequent_task_type: scheduling (confidence: 40%)\n\u2022 You frequently work on frequent_task_type: planning (confidence: 20%)\n\u2022 You frequently work on default_urgency: high (confidence: 10%)\n\nRecommendations:\n\u2022 Consider using 'focus mode' for deep work sessions\n\u2022 Try the 'morning routine' to start your day productively\n\u2022 Use task management to track important deadlines\n",
+    "response_time": 0.003823995590209961,
+    "quality_score": {
+      "total": 1.0,
+      "capabilities_met": [
+        "data_analysis",
+        "insight_generation",
+        "personalized_recommendations"
+      ],
+      "length_score": 1.0,
+      "structure_score": 0.1
+    },
+    "capabilities_met": [
+      "data_analysis",
+      "insight_generation",
+      "personalized_recommendations"
+    ]
+  },
+  {
+    "test_number": 7,
+    "category": "understanding",
+    "complexity": 4,
+    "input": "I'm feeling overwhelmed with too many projects and tight deadlines",
+    "expected_capabilities": [
+      "sentiment_analysis",
+      "stress_detection",
+      "supportive_response"
+    ],
+    "timestamp": "2025-11-13T18:57:27.062361",
+    "success": true,
+    "response": "I understand this is urgent. I understand that feeling overwhelmed can be really challenging. Let's break this down together. Can you tell me what specific tasks or deadlines are weighing on your mind? I can help you prioritize, create a manageable schedule, or find ways to streamline your workflow. Sometimes just organizing everything clearly can make it feel much more manageable.",
+    "response_time": 0.03775668144226074,
+    "quality_score": {
+      "total": 1.0,
+      "capabilities_met": [
+        "sentiment_analysis",
+        "stress_detection",
+        "supportive_response"
+      ],
+      "length_score": 1.0,
+      "structure_score": 0.5
+    },
+    "capabilities_met": [
+      "sentiment_analysis",
+      "stress_detection",
+      "supportive_response"
+    ]
+  },
+  {
+    "test_number": 8,
+    "category": "professional",
+    "complexity": 5,
+    "input": "Help me plan a project timeline with multiple dependencies",
+    "expected_capabilities": [
+      "project_planning",
+      "dependency_management",
+      "timeline_creation"
+    ],
+    "timestamp": "2025-11-13T18:57:27.595395",
+    "success": true,
+    "response": "Absolutely! Research paper writing can feel overwhelming, but breaking it into clear phases makes it much more manageable. Here's a strategic approach: **Phase 1 (Research & Planning):** Topic refinement, literature review, thesis development, outline creation. **Phase 2 (Foundation):** Introduction and methodology sections, reference organization. **Phase 3 (Core Content):** Main body sections, data analysis, arguments development. **Phase 4 (Refinement):** Conclusion, abstract, editing passes, citation formatting. I can help you estimate time for each phase, set milestone deadlines, track your progress, and even help you find relevant sources. What's your paper topic and deadline? This will help me create a detailed timeline.",
+    "response_time": 0.030293703079223633,
+    "quality_score": {
+      "total": 0.94,
+      "capabilities_met": [
+        "project_planning",
+        "timeline_creation"
+      ],
+      "length_score": 1.0,
+      "structure_score": 0.7
+    },
+    "capabilities_met": [
+      "project_planning",
+      "timeline_creation"
+    ]
+  }
+]

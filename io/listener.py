@@ -11,7 +11,12 @@ import time
 import queue
 import numpy as np
 import sounddevice as sd
-import webrtcvad
+try:
+    import webrtcvad
+    VAD_AVAILABLE = True
+except ImportError:
+    VAD_AVAILABLE = False
+    logging.warning("webrtcvad not available. Voice activity detection disabled.")
 from faster_whisper import WhisperModel
 from typing import Optional, Callable, Dict, Any
 import yaml
@@ -63,7 +68,11 @@ class VoiceActivityDetector:
     
     def __init__(self, sample_rate: int = 16000, aggressiveness: int = 3):
         self.sample_rate = sample_rate
-        self.vad = webrtcvad.Vad(aggressiveness)  # 0-3, 3 is most aggressive
+        self.vad_available = VAD_AVAILABLE
+        if self.vad_available:
+            self.vad = webrtcvad.Vad(aggressiveness)  # 0-3, 3 is most aggressive
+        else:
+            self.vad = None
         self.frame_duration = 30  # ms
         self.frame_size = int(sample_rate * self.frame_duration / 1000)
         
@@ -86,6 +95,8 @@ class VoiceActivityDetector:
             return False
         
         try:
+            if not self.vad_available:
+                return True  # Default to assuming speech when VAD unavailable
             return self.vad.is_speech(audio_chunk.tobytes(), self.sample_rate)
         except Exception:
             return False
