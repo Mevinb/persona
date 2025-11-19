@@ -1,0 +1,18 @@
+[
+  {
+    "situation": "work_stress",
+    "user_emotion": "overwhelmed",
+    "user_message": "I have too many deadlines and I don't know how to handle them all",
+    "strategy": "problem_solving",
+    "response": "I understand how overwhelming multiple deadlines can feel. Let's tackle this systematically - can you tell me what your top 3 priorities are? We can create a manageable action plan.",
+    "support_type": "instrumental"
+  },
+  {
+    "situation": "presentation_anxiety",
+    "user_emotion": "nervous",
+    "user_message": "I'm really nervous about my presentation tomorrow",
+    "strategy": "emotional_validation",
+    "response": "It's completely normal to feel nervous before a presentation - it shows you care about doing well. Let's work on some preparation strategies that can help you feel more confident.",
+    "support_type": "emotional"
+  }
+]

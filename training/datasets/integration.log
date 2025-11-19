@@ -1,0 +1,18 @@
+2025-11-19 08:32:33,663 - INFO - Creating sample datasets based on real dataset structures...
+2025-11-19 08:32:33,664 - INFO - Created sample dataset: personachat_sample.json (3 examples)
+2025-11-19 08:32:33,666 - INFO - Created sample dataset: dailydialog_sample.json (2 examples)
+2025-11-19 08:32:33,670 - INFO - Created sample dataset: task_management.json (3 examples)
+2025-11-19 08:32:33,671 - INFO - Created sample dataset: emotional_support.json (2 examples)
+2025-11-19 08:32:33,674 - INFO - Created sample dataset: knowledge_qa.json (2 examples)
+2025-11-19 08:32:33,674 - INFO - Processing conversational datasets...
+2025-11-19 08:32:33,674 - INFO - Processing task_management datasets...
+2025-11-19 08:32:33,675 - INFO - Processing knowledge_qa datasets...
+2025-11-19 08:32:33,675 - INFO - Processing emotional_support datasets...
+2025-11-19 08:32:33,677 - INFO - Integrated training data saved to training\datasets\integrated_training_data.json
+2025-11-19 08:32:33,677 - INFO - Total examples: 14
+2025-11-19 08:32:33,677 - INFO - Conversations: 7
+2025-11-19 08:32:33,677 - INFO - Task examples: 3
+2025-11-19 08:32:33,678 - INFO - Knowledge QA: 2
+2025-11-19 08:32:33,678 - INFO - Emotional support: 2
+2025-11-19 08:32:33,681 - INFO - ARK training data saved to training\datasets\ark_integrated_training.jsonl
+2025-11-19 08:32:33,681 - INFO - Total ARK examples: 14

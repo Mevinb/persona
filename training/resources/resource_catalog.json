@@ -1,0 +1,92 @@
+{
+  "created_date": "2025-11-19T08:38:28.453008",
+  "total_categories": 4,
+  "resources": {
+    "huggingface_datasets": [
+      {
+        "name": "Daily Dialog",
+        "description": "Multi-turn dialogues for conversational AI",
+        "url": "https://huggingface.co/datasets/daily_dialog",
+        "format": "json",
+        "size": "83K dialogues",
+        "use_case": "conversational training"
+      },
+      {
+        "name": "PersonaChat",
+        "description": "Personality-based conversations",
+        "url": "https://huggingface.co/datasets/bavard/personachat_truecased",
+        "format": "json",
+        "size": "164K conversations",
+        "use_case": "personality development"
+      },
+      {
+        "name": "Empathetic Dialogues",
+        "description": "Emotionally aware conversations",
+        "url": "https://huggingface.co/datasets/empathetic_dialogues",
+        "format": "csv",
+        "size": "25K dialogues",
+        "use_case": "emotional intelligence"
+      }
+    ],
+    "knowledge_bases": [
+      {
+        "name": "WikiHow",
+        "description": "Step-by-step guides for various tasks",
+        "url": "https://www.wikihow.com/",
+        "format": "web_scraping",
+        "size": "200K+ articles",
+        "use_case": "how-to assistance"
+      },
+      {
+        "name": "Stack Overflow QA",
+        "description": "Technical Q&A for problem solving",
+        "url": "https://stackoverflow.com/",
+        "format": "api",
+        "size": "23M questions",
+        "use_case": "technical support"
+      }
+    ],
+    "professional_datasets": [
+      {
+        "name": "Harvard Business Review",
+        "description": "Management and leadership insights",
+        "url": "https://hbr.org/",
+        "format": "web_scraping",
+        "size": "10K+ articles",
+        "use_case": "professional guidance"
+      },
+      {
+        "name": "Productivity Blogs",
+        "description": "Time management and productivity tips",
+        "url": "multiple sources",
+        "format": "rss/api",
+        "size": "50K+ articles",
+        "use_case": "productivity coaching"
+      }
+    ],
+    "specialized_ai_datasets": [
+      {
+        "name": "CommonSense QA",
+        "description": "Common sense reasoning questions",
+        "url": "https://www.tau-nlp.org/commonsenseqa",
+        "format": "json",
+        "size": "12K questions",
+        "use_case": "reasoning enhancement"
+      },
+      {
+        "name": "Social IQA",
+        "description": "Social intelligence Q&A",
+        "url": "https://leaderboard.allenai.org/socialiqa",
+        "format": "json",
+        "size": "38K questions",
+        "use_case": "social awareness"
+      }
+    ]
+  },
+  "usage_instructions": {
+    "step_1": "Choose categories relevant to your use case",
+    "step_2": "Run download_and_process_datasets() with selected categories",
+    "step_3": "Integrate processed data with ARK training system",
+    "step_4": "Validate improvements and iterate"
+  }
+}

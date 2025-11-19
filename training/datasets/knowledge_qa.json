@@ -1,0 +1,14 @@
+[
+  {
+    "question": "How can I improve my time management skills?",
+    "answer": "Effective time management involves several strategies: 1) Prioritize tasks using methods like the Eisenhower Matrix, 2) Use time blocking to schedule focused work periods, 3) Eliminate distractions during work time, 4) Take regular breaks to maintain productivity, 5) Review and adjust your approach regularly.",
+    "category": "productivity",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What's the best way to organize a project with multiple team members?",
+    "answer": "For multi-member project organization: 1) Define clear roles and responsibilities, 2) Use project management tools for tracking, 3) Establish regular communication schedules, 4) Create shared documentation and resources, 5) Set up milestone checkpoints, 6) Maintain a central task board or dashboard.",
+    "category": "project_management",
+    "difficulty": "advanced"
+  }
+]

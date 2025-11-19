@@ -1,0 +1,14 @@
+{
+  "learning_sessions": 2,
+  "new_patterns_learned": 1,
+  "training_examples_added": 1,
+  "last_learning_time": "2025-11-19T10:02:50.427478",
+  "capability_improvements": [
+    {
+      "timestamp": "2025-11-19T10:02:50.156960",
+      "type": "pattern_learning",
+      "category": "academic",
+      "confidence": 0.8333333333333334
+    }
+  ]
+}

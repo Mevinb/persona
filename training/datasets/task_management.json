@@ -1,0 +1,34 @@
+[
+  {
+    "intent": "create_task",
+    "entities": {
+      "task_name": "review reports",
+      "priority": "high",
+      "due_date": "tomorrow"
+    },
+    "user_input": "Create a high priority task to review reports by tomorrow",
+    "response": "I've created a high priority task 'review reports' with due date set for tomorrow. Would you like me to set a reminder?",
+    "context": "task_management"
+  },
+  {
+    "intent": "schedule_meeting",
+    "entities": {
+      "meeting_type": "team meeting",
+      "urgency": "urgent",
+      "participants": "team"
+    },
+    "user_input": "I need to schedule an urgent team meeting",
+    "response": "I'll help you schedule an urgent team meeting. Let me check everyone's availability and suggest optimal time slots.",
+    "context": "scheduling"
+  },
+  {
+    "intent": "productivity_analysis",
+    "entities": {
+      "time_period": "this week",
+      "focus": "productivity"
+    },
+    "user_input": "How productive have I been this week?",
+    "response": "Based on your activity this week, you've completed 12 tasks with an average completion time of 2.5 hours. Your peak productivity hours are 9-11 AM.",
+    "context": "analytics"
+  }
+]

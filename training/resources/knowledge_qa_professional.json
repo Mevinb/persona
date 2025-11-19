@@ -1,0 +1,14 @@
+[
+  {
+    "question": "How do I build trust with a new team I'm managing?",
+    "answer": "Building trust with a new team requires consistent actions over time and genuine investment in relationships: 1) Be transparent about your management style and expectations, 2) Follow through on all commitments, no matter how small, 3) Show genuine interest in each team member's goals and challenges, 4) Admit when you don't know something and ask for their expertise, 5) Provide support and resources when team members face difficulties, 6) Give credit generously and take responsibility for failures, 7) Be consistent in your decisions and communication, 8) Create psychological safety where people feel comfortable sharing concerns. Trust is built through small, consistent actions rather than grand gestures.",
+    "category": "leadership",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What are effective strategies for managing remote teams?",
+    "answer": "Successful remote team management requires intentional strategies that address communication, culture, and productivity: 1) Establish clear communication rhythms (daily standups, weekly one-on-ones, monthly team meetings), 2) Use asynchronous communication effectively with documented decisions and clear action items, 3) Create shared visibility into work progress through project management tools, 4) Foster informal connections through virtual coffee chats and team building activities, 5) Set clear expectations for availability and response times, 6) Focus on outcomes rather than hours worked, 7) Provide the right tools and technology for collaboration, 8) Be extra intentional about recognition and feedback since casual praise is less visible remotely. The key is over-communicating initially until you find the right rhythm for your team.",
+    "category": "remote_management",
+    "difficulty": "advanced"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2025-11-19T10:02:28.191999",
+    "feedback_type": "positive",
+    "details": "Great explanation, very helpful!",
+    "conversation_id": null,
+    "processed": false
+  },
+  {
+    "timestamp": "2025-11-19T10:02:28.316578",
+    "feedback_type": "suggestion",
+    "details": "Could you add more practical examples?",
+    "conversation_id": null,
+    "processed": false
+  },
+  {
+    "timestamp": "2025-11-19T10:02:49.630208",
+    "feedback_type": "positive",
+    "details": "Excellent study techniques, very helpful!",
+    "conversation_id": null,
+    "processed": false
+  },
+  {
+    "timestamp": "2025-11-19T10:02:49.900072",
+    "feedback_type": "suggestion",
+    "details": "Could you add more examples for physics concepts?",
+    "conversation_id": null,
+    "processed": false
+  },
+  {
+    "timestamp": "2025-11-19T10:02:50.081845",
+    "feedback_type": "negative",
+    "details": "Response was too generic, need more specifics",
+    "conversation_id": null,
+    "processed": false
+  }
+]

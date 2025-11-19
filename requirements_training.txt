@@ -1,0 +1,32 @@
+# ARK Training Requirements
+# ========================
+
+# Core dependencies for ARK Advanced Training System
+requests>=2.28.0
+feedparser>=6.0.0
+schedule>=1.2.0
+wikipedia-api>=0.6.0
+
+# Data processing and analysis
+numpy>=1.24.0
+pandas>=1.5.0
+scikit-learn>=1.2.0
+
+# Natural language processing
+nltk>=3.8
+spacy>=3.5.0
+
+# Web scraping capabilities
+beautifulsoup4>=4.12.0
+selenium>=4.8.0
+
+# Machine learning enhancement
+transformers>=4.21.0
+torch>=1.13.0
+
+# Database and storage
+sqlalchemy>=1.4.0
+
+# Utilities
+python-dateutil>=2.8.0
+pytz>=2022.7

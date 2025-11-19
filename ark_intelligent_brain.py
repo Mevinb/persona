@@ -19,6 +19,7 @@ class IntelligentResponseEngine:
     
     def __init__(self, training_data_path: str = "ark_comprehensive_training.jsonl"):
         self.training_data = []
+        self.db_training_data = []  # Database training data
         self.context_memory = {}
         self.user_preferences = {}
         self.conversation_history = []
@@ -62,6 +63,43 @@ class IntelligentResponseEngine:
                         "category": example.get("category", "general"),
                         "complexity": example.get("complexity", "medium"),
                         "score": score
+                    }
+        
+        return best_match
+    
+    def find_database_match(self, user_input: str) -> Optional[Dict]:
+        """Find the best match in high-quality database training data."""
+        if not hasattr(self, 'db_training_data') or not self.db_training_data:
+            return None
+            
+        user_input_lower = user_input.lower()
+        best_match = None
+        best_score = 0
+        
+        for example in self.db_training_data:
+            input_text = example.get("input", "").lower()
+            
+            # Calculate similarity score based on keyword matching
+            common_words = set(user_input_lower.split()) & set(input_text.split())
+            if len(common_words) > 0:
+                # Weight by quality score from database
+                quality_bonus = example.get("quality", 0.8) * 0.2
+                word_match_score = len(common_words) / max(len(user_input_lower.split()), len(input_text.split()))
+                
+                # Category bonus if keywords match
+                category_bonus = 0
+                category = example.get("category", "")
+                if any(word in user_input_lower for word in category.split("_")):
+                    category_bonus = 0.3
+                
+                total_score = word_match_score + quality_bonus + category_bonus
+                
+                if total_score > best_score:
+                    best_score = total_score
+                    best_match = {
+                        "output": example.get("output", ""),
+                        "category": example.get("category", ""),
+                        "score": total_score
                     }
         
         return best_match if best_score > 0.2 else None
@@ -173,7 +211,14 @@ class IntelligentResponseEngine:
     def generate_intelligent_response(self, user_input: str, context: Dict[str, Any]) -> str:
         """Generate an intelligent response based on training data and context."""
         
-        # Try to find a similar training scenario
+        # First, try to find a match in high-quality database training data
+        db_match = self.find_database_match(user_input)
+        if db_match and db_match["score"] > 0.3:
+            # Use high-quality database response
+            adapted_response = self.adapt_response_to_context(db_match["output"], context)
+            return adapted_response
+        
+        # Try to find a similar training scenario in JSONL data
         similar_scenario = self.find_similar_scenario(user_input)
         
         if similar_scenario and similar_scenario["score"] > 0.4:
@@ -241,10 +286,12 @@ class ARKIntelligentBrain:
         self.response_engine = IntelligentResponseEngine()
         self.memory_db_path = memory_db_path
         self.current_session = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.training_db_path = "data/ark_complete_training.db"
         self.init_memory()
         
-        # Load user preferences and context
+        # Load user preferences and training data
         self.load_user_preferences()
+        self.load_training_data(self.training_db_path)
         
     def init_memory(self):
         """Initialize the memory system."""
@@ -311,6 +358,45 @@ class ARKIntelligentBrain:
         
         conn.close()
         self.response_engine.user_preferences = preferences
+    
+    def load_training_data(self, training_db_path: str = "data/ark_complete_training.db"):
+        """Load enhanced training data from SQLite database."""
+        try:
+            if os.path.exists(training_db_path):
+                conn = sqlite3.connect(training_db_path)
+                cursor = conn.cursor()
+                
+                cursor.execute("""
+                    SELECT category, input_text, output_text, quality_score
+                    FROM training_data
+                    ORDER BY quality_score DESC
+                """)
+                
+                training_examples = []
+                for row in cursor.fetchall():
+                    category, input_text, output_text, quality_score = row
+                    training_examples.append({
+                        "category": category,
+                        "input": input_text,
+                        "output": output_text,
+                        "quality": quality_score
+                    })
+                
+                conn.close()
+                
+                # Update response engine with database training data
+                self.response_engine.db_training_data = training_examples
+                print(f"Loaded {len(training_examples)} enhanced training examples from database")
+                return True
+            else:
+                print(f"Training database not found at {training_db_path}")
+                self.response_engine.db_training_data = []
+                return False
+                
+        except Exception as e:
+            print(f"Error loading training database: {e}")
+            self.response_engine.db_training_data = []
+            return False
     
     def process_input(self, user_input: str) -> str:
         """Process user input and generate intelligent response."""

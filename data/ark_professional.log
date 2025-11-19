@@ -1,0 +1,3 @@
+2025-11-18 13:53:52,866 - root - ERROR - Error starting ARK ML Enhanced: 'MLEnhancedBrain' object has no attribute 'logger'
+2025-11-18 13:55:44,386 - root - ERROR - Error in main loop: ARKIntelligentBrain.store_conversation() missing 1 required positional argument: 'context'
+2025-11-18 13:56:04,155 - root - ERROR - Error in main loop: ARKIntelligentBrain.store_conversation() missing 1 required positional argument: 'context'

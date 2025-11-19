@@ -1,0 +1,40 @@
+{
+  "email": {
+    "enabled": true,
+    "provider": "gmail",
+    "credentials": {}
+  },
+  "calendar": {
+    "enabled": true,
+    "provider": "google",
+    "credentials": {}
+  },
+  "file_manager": {
+    "enabled": true,
+    "cloud_providers": [
+      "google_drive",
+      "onedrive"
+    ]
+  },
+  "web_search": {
+    "enabled": true,
+    "search_engine": "google",
+    "news_enabled": true,
+    "weather_enabled": true
+  },
+  "system_control": {
+    "enabled": true,
+    "allowed_operations": [
+      "open_app",
+      "close_app",
+      "system_info"
+    ]
+  },
+  "communication": {
+    "enabled": true,
+    "platforms": [
+      "teams",
+      "slack"
+    ]
+  }
+}

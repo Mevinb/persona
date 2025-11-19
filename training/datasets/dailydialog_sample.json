@@ -1,0 +1,44 @@
+[
+  {
+    "dialog": [
+      "I need to set up a meeting with my team",
+      "I can help you with that. When would be the best time for the meeting?",
+      "Preferably in the morning, around 10 AM",
+      "Great! I'll help you check availability and send calendar invites. What's the meeting about?"
+    ],
+    "emotion": [
+      "neutral",
+      "helpful",
+      "neutral",
+      "helpful"
+    ],
+    "act": [
+      "inform",
+      "question",
+      "inform",
+      "question"
+    ],
+    "topic": "meeting_scheduling"
+  },
+  {
+    "dialog": [
+      "I'm stressed about my upcoming presentation",
+      "I understand. Presentations can be nerve-wracking. How can I help you prepare?",
+      "I need help organizing my content and practicing",
+      "Perfect! Let's start by outlining your key points and then work on your delivery."
+    ],
+    "emotion": [
+      "anxious",
+      "supportive",
+      "hopeful",
+      "encouraging"
+    ],
+    "act": [
+      "express_emotion",
+      "empathy",
+      "request_help",
+      "offer_help"
+    ],
+    "topic": "presentation_prep"
+  }
+]

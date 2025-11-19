@@ -1,0 +1,35 @@
+{
+  "training_timestamp": "2025-11-18T13:52:41.339955",
+  "total_examples": 16,
+  "model_performance": {
+    "intent_accuracy": 0.75,
+    "sentiment_accuracy": 0.8125,
+    "total_examples": 16,
+    "unique_intents": 12,
+    "unique_categories": 9
+  },
+  "training_categories": [
+    "calendar_query",
+    "research",
+    "emotional_intelligence",
+    "productivity",
+    "task_management",
+    "scheduling",
+    "email_assistance",
+    "problem_solving",
+    "learning"
+  ],
+  "complexity_levels": [
+    2,
+    3,
+    4
+  ],
+  "model_files": [
+    "intent_classifier.joblib",
+    "sentiment_classifier.joblib",
+    "text_vectorizer.joblib",
+    "response_database.db",
+    "similarity_matrix.npy",
+    "example_mapping.json"
+  ]
+}

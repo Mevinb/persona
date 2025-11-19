@@ -1,0 +1,34 @@
+2025-11-19 08:32:43,059 - INFO - Loaded 14 examples from training/datasets/ark_integrated_training.jsonl
+2025-11-19 08:32:44,960 - INFO - Starting advanced training with external datasets...
+2025-11-19 08:32:44,980 - INFO - Prepared training database with 14 examples
+2025-11-19 08:32:44,980 - ERROR - Error processing example 0: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,981 - ERROR - Error processing example 1: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,981 - ERROR - Error processing example 2: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,981 - ERROR - Error processing example 3: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,983 - ERROR - Error processing example 4: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,983 - ERROR - Error processing example 5: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,983 - ERROR - Error processing example 6: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,984 - ERROR - Error processing example 7: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,984 - ERROR - Error processing example 8: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,984 - ERROR - Error processing example 9: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,984 - ERROR - Error processing example 10: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,984 - ERROR - Error processing example 11: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,985 - ERROR - Error processing example 12: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:32:44,985 - ERROR - Error processing example 13: 'ARKIntelligentBrain' object has no attribute 'engine'
+2025-11-19 08:33:32,091 - INFO - Loaded 14 examples from training/datasets/ark_integrated_training.jsonl
+2025-11-19 08:33:34,158 - INFO - Starting advanced training with external datasets...
+2025-11-19 08:33:34,170 - INFO - Prepared training database with 14 examples
+2025-11-19 08:33:34,177 - ERROR - Error processing example 0: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,185 - ERROR - Error processing example 1: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,193 - ERROR - Error processing example 2: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,201 - ERROR - Error processing example 3: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,247 - ERROR - Error processing example 4: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,269 - ERROR - Error processing example 5: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,276 - ERROR - Error processing example 6: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,290 - ERROR - Error processing example 7: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,297 - ERROR - Error processing example 8: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,304 - ERROR - Error processing example 9: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,311 - ERROR - Error processing example 10: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,319 - ERROR - Error processing example 11: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,326 - ERROR - Error processing example 12: 'ARKIntelligentBrain' object has no attribute 'learn_preference'
+2025-11-19 08:33:34,333 - ERROR - Error processing example 13: 'ARKIntelligentBrain' object has no attribute 'learn_preference'

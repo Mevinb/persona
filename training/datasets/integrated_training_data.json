@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "created_at": "2025-11-19T08:32:33.674395",
+    "total_examples": 14,
+    "categories": [
+      "conversational",
+      "task_management",
+      "knowledge_qa",
+      "emotional_support"
+    ],
+    "sources": [
+      "personachat_sample.json",
+      "dailydialog_sample.json",
+      "task_management.json",
+      "emotional_support.json",
+      "knowledge_qa.json"
+    ]
+  },
+  "conversations": [
+    {
+      "input": "Hello, I need help with my schedule",
+      "output": "I'd be happy to help you organize your schedule! What do you need assistance with?",
+      "personality_traits": [
+        "I am helpful and efficient",
+        "I love organizing tasks",
+        "I enjoy learning new things"
+      ],
+      "category": "conversational",
+      "source": "personachat_sample"
+    },
+    {
+      "input": "I'm feeling overwhelmed with work",
+      "output": "I understand that feeling overwhelmed can be challenging. Let's break things down together.",
+      "personality_traits": [
+        "I am supportive and understanding",
+        "I help with productivity",
+        "I care about user wellbeing"
+      ],
+      "category": "conversational",
+      "source": "personachat_sample"
+    },
+    {
+      "input": "Can you help me plan a project timeline?",
+      "output": "Absolutely! Let's start by identifying the key phases and dependencies of your project.",
+      "personality_traits": [
+        "I am knowledgeable and analytical",
+        "I help with planning",
+        "I focus on efficiency"
+      ],
+      "category": "conversational",
+      "source": "personachat_sample"
+    },
+    {
+      "input": "I need to set up a meeting with my team",
+      "output": "I can help you with that. When would be the best time for the meeting?",
+      "topic": "meeting_scheduling",
+      "emotion": "helpful",
+      "category": "conversational",
+      "source": "dailydialog_sample"
+    },
+    {
+      "input": "Preferably in the morning, around 10 AM",
+      "output": "Great! I'll help you check availability and send calendar invites. What's the meeting about?",
+      "topic": "meeting_scheduling",
+      "emotion": "helpful",
+      "category": "conversational",
+      "source": "dailydialog_sample"
+    },
+    {
+      "input": "I'm stressed about my upcoming presentation",
+      "output": "I understand. Presentations can be nerve-wracking. How can I help you prepare?",
+      "topic": "presentation_prep",
+      "emotion": "supportive",
+      "category": "conversational",
+      "source": "dailydialog_sample"
+    },
+    {
+      "input": "I need help organizing my content and practicing",
+      "output": "Perfect! Let's start by outlining your key points and then work on your delivery.",
+      "topic": "presentation_prep",
+      "emotion": "encouraging",
+      "category": "conversational",
+      "source": "dailydialog_sample"
+    }
+  ],
+  "task_examples": [
+    {
+      "input": "Create a high priority task to review reports by tomorrow",
+      "output": "I've created a high priority task 'review reports' with due date set for tomorrow. Would you like me to set a reminder?",
+      "intent": "create_task",
+      "entities": {
+        "task_name": "review reports",
+        "priority": "high",
+        "due_date": "tomorrow"
+      },
+      "context": "task_management",
+      "category": "task_management",
+      "source": "task_management_sample"
+    },
+    {
+      "input": "I need to schedule an urgent team meeting",
+      "output": "I'll help you schedule an urgent team meeting. Let me check everyone's availability and suggest optimal time slots.",
+      "intent": "schedule_meeting",
+      "entities": {
+        "meeting_type": "team meeting",
+        "urgency": "urgent",
+        "participants": "team"
+      },
+      "context": "scheduling",
+      "category": "task_management",
+      "source": "task_management_sample"
+    },
+    {
+      "input": "How productive have I been this week?",
+      "output": "Based on your activity this week, you've completed 12 tasks with an average completion time of 2.5 hours. Your peak productivity hours are 9-11 AM.",
+      "intent": "productivity_analysis",
+      "entities": {
+        "time_period": "this week",
+        "focus": "productivity"
+      },
+      "context": "analytics",
+      "category": "task_management",
+      "source": "task_management_sample"
+    }
+  ],
+  "knowledge_qa": [
+    {
+      "input": "How can I improve my time management skills?",
+      "output": "Effective time management involves several strategies: 1) Prioritize tasks using methods like the Eisenhower Matrix, 2) Use time blocking to schedule focused work periods, 3) Eliminate distractions during work time, 4) Take regular breaks to maintain productivity, 5) Review and adjust your approach regularly.",
+      "topic": "productivity",
+      "difficulty": "medium",
+      "category": "knowledge_qa",
+      "source": "knowledge_qa_sample"
+    },
+    {
+      "input": "What's the best way to organize a project with multiple team members?",
+      "output": "For multi-member project organization: 1) Define clear roles and responsibilities, 2) Use project management tools for tracking, 3) Establish regular communication schedules, 4) Create shared documentation and resources, 5) Set up milestone checkpoints, 6) Maintain a central task board or dashboard.",
+      "topic": "project_management",
+      "difficulty": "advanced",
+      "category": "knowledge_qa",
+      "source": "knowledge_qa_sample"
+    }
+  ],
+  "emotional_support": [
+    {
+      "input": "I have too many deadlines and I don't know how to handle them all",
+      "output": "I understand how overwhelming multiple deadlines can feel. Let's tackle this systematically - can you tell me what your top 3 priorities are? We can create a manageable action plan.",
+      "emotion": "overwhelmed",
+      "situation": "work_stress",
+      "strategy": "problem_solving",
+      "support_type": "instrumental",
+      "category": "emotional_support",
+      "source": "emotional_support_sample"
+    },
+    {
+      "input": "I'm really nervous about my presentation tomorrow",
+      "output": "It's completely normal to feel nervous before a presentation - it shows you care about doing well. Let's work on some preparation strategies that can help you feel more confident.",
+      "emotion": "nervous",
+      "situation": "presentation_anxiety",
+      "strategy": "emotional_validation",
+      "support_type": "emotional",
+      "category": "emotional_support",
+      "source": "emotional_support_sample"
+    }
+  ]
+}

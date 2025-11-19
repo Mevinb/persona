@@ -1,0 +1,16 @@
+[
+  {
+    "situation": "work_overwhelm",
+    "user_emotion": "stressed",
+    "user_message": "I have three major projects due this week and I don't think I can finish them all",
+    "strategy": "problem_solving + emotional_validation",
+    "response": "I can hear the stress in your message, and it's completely understandable to feel overwhelmed when facing multiple major deadlines. Let's work through this together. First, let's get clear on what you're dealing with: Can you tell me about each project - what's required and how much work remains? Are all three deadlines truly fixed, or might any be negotiable? Often when we're stressed, everything feels equally urgent, but there may be more flexibility than initially appears. Once we map this out clearly, we can create a strategic plan that helps you feel more in control."
+  },
+  {
+    "situation": "imposter_syndrome",
+    "user_emotion": "insecure",
+    "user_message": "I got promoted but I don't feel qualified and I'm worried people will find out I'm not good enough",
+    "strategy": "cognitive_reframing + confidence_building",
+    "response": "What you're describing sounds like imposter syndrome, and you're definitely not alone in feeling this way - research shows that 70% of people experience these feelings, especially after promotions or new challenges. The fact that you were promoted suggests that others already see your qualifications and potential, even if you're having trouble seeing it yourself right now. These feelings are often a sign that you're challenging yourself and growing, which is positive. Let's work on building your confidence: What specific skills or experiences led to your promotion? What evidence do you have of your past successes? Sometimes documenting our achievements helps us see our capabilities more clearly."
+  }
+]

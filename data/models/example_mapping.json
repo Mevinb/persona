@@ -1,0 +1,98 @@
+{
+  "0": {
+    "input": "Schedule a meeting with John for next Tuesday at 2 PM",
+    "output": "I'll schedule that meeting with John for next Tuesday at 2:00 PM. Let me check your calendar for availability and send him a meeting invitation. Would you like me to include an agenda or any specific topics to discuss?",
+    "intent": "schedule_meeting",
+    "category": "scheduling"
+  },
+  "1": {
+    "input": "What's on my calendar for tomorrow?",
+    "output": "Let me check your calendar for tomorrow. Here's your schedule: [I would typically access your calendar system to provide specific appointments]. Would you like me to help you prepare for any of these meetings or tasks?",
+    "intent": "check_calendar",
+    "category": "calendar_query"
+  },
+  "2": {
+    "input": "Help me write a professional email to my client about project delays",
+    "output": "I'll help you draft a professional email about the project delays. Here's a suggested structure: Start with acknowledgment, explain the situation briefly, provide a revised timeline, and offer solutions. Would you like me to help you write the specific content based on your project details?",
+    "intent": "draft_email",
+    "category": "email_assistance"
+  },
+  "3": {
+    "input": "Research the latest trends in artificial intelligence for my presentation",
+    "output": "I'll help you research the latest AI trends for your presentation. Key current trends include: Large Language Models advancement, AI ethics and governance, edge AI deployment, multimodal AI systems, and AI democratization. Would you like me to dive deeper into any specific area or help you organize this into presentation slides?",
+    "intent": "research_assistance",
+    "category": "research"
+  },
+  "4": {
+    "input": "I'm having trouble prioritizing my tasks today",
+    "output": "I understand task prioritization can be challenging. Let's use a systematic approach: First, list all your tasks, then categorize them by urgency and importance. I can help you create a priority matrix or use techniques like the Eisenhower Method. What are the main tasks you're trying to prioritize?",
+    "intent": "task_prioritization",
+    "category": "problem_solving"
+  },
+  "5": {
+    "input": "I want to improve my presentation skills. Can you help me practice?",
+    "output": "Absolutely! I'd be happy to help you improve your presentation skills. We can work on structure, content organization, delivery techniques, and handling Q&A sessions. Would you like to start by practicing a specific presentation you're working on, or should we begin with general presentation techniques?",
+    "intent": "skill_development",
+    "category": "learning"
+  },
+  "6": {
+    "input": "Create a task to review quarterly reports by Friday with high priority",
+    "output": "Task created successfully! 'Review quarterly reports' - Due: Friday, Priority: High. I've set this as a high-priority task. Would you like me to break this down into smaller subtasks or set up reminders leading up to the deadline?",
+    "intent": "create_task",
+    "category": "task_management"
+  },
+  "7": {
+    "input": "Show me all my urgent tasks",
+    "output": "Here are your urgent tasks: [I would query your task database for urgent items]. These require immediate attention. Would you like me to help you plan how to tackle these efficiently or reorganize your schedule to accommodate them?",
+    "intent": "query_tasks",
+    "category": "task_management"
+  },
+  "8": {
+    "input": "I completed the project proposal task",
+    "output": "Great job completing the project proposal task! I'll mark it as completed in your task list. That's excellent progress. Do you have any follow-up tasks related to this project, or would you like me to help you plan the next steps?",
+    "intent": "complete_task",
+    "category": "task_management"
+  },
+  "9": {
+    "input": "Help me plan my day with the most important tasks first",
+    "output": "I'll help you plan an effective day by prioritizing your most important tasks. Let me organize your tasks by impact and urgency. Based on your current task list, I recommend tackling high-impact work during your peak energy hours. What time of day do you typically feel most productive?",
+    "intent": "plan_day",
+    "category": "task_management"
+  },
+  "10": {
+    "input": "I'm feeling overwhelmed with all these deadlines",
+    "output": "I understand that feeling overwhelmed can be really stressful. Let's break this down together. Can you tell me about your most pressing deadlines? I can help you create a manageable plan, prioritize tasks, or find ways to reduce the pressure. Sometimes just organizing everything clearly makes it feel much more manageable.",
+    "intent": "emotional_intelligence",
+    "category": "emotional_intelligence"
+  },
+  "11": {
+    "input": "I'm excited about starting this new project!",
+    "output": "That's wonderful! Your enthusiasm for new projects is really energizing. I'd love to help you channel that excitement into effective planning. What aspects of the project are you most excited about? Let's make sure we set you up for success from the start.",
+    "intent": "emotional_intelligence",
+    "category": "emotional_intelligence"
+  },
+  "12": {
+    "input": "I'm frustrated because nothing seems to be working today",
+    "output": "I can hear the frustration in your words, and those days where nothing seems to go right are truly challenging. Sometimes stepping back and taking a different approach can help. Would you like to talk about what specifically isn't working? Maybe we can problem-solve together or find a way to reset your day.",
+    "intent": "emotional_intelligence",
+    "category": "emotional_intelligence"
+  },
+  "13": {
+    "input": "Analyze my productivity patterns from this week",
+    "output": "Based on your activity patterns this week, I notice you're most productive during morning hours and tend to have energy dips around mid-afternoon. Your focus sessions average 45 minutes, which aligns well with optimal concentration periods. I'd recommend scheduling your most challenging tasks in the morning and using afternoons for meetings or administrative work.",
+    "intent": "productivity",
+    "category": "productivity"
+  },
+  "14": {
+    "input": "Set up a focus session for deep work",
+    "output": "Perfect! I'll set up a deep work focus session for you. I'll minimize distractions, start a focus timer for 90 minutes (optimal for deep work), and ensure your environment is optimized for concentration. I'll also block calendar notifications during this time. What project would you like to focus on?",
+    "intent": "productivity",
+    "category": "productivity"
+  },
+  "15": {
+    "input": "Help me improve my time management",
+    "output": "I'd be happy to help you improve your time management! Let's start with a quick assessment: How do you currently plan your day? Do you use any specific techniques? Based on your work style, I can recommend strategies like time-blocking, the Pomodoro Technique, or priority matrices. What's your biggest time management challenge?",
+    "intent": "productivity",
+    "category": "productivity"
+  }
+}
