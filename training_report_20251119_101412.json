@@ -1,0 +1,29 @@
+{
+  "start_time": "2025-11-19T10:14:05.430980",
+  "training_phases": [
+    {
+      "phase": 1,
+      "name": "Internet Dataset Collection",
+      "success": true,
+      "examples_added": 1189,
+      "datasets_processed": 2
+    },
+    {
+      "phase": 2,
+      "name": "Advanced Dataset Processing",
+      "success": false,
+      "error": "'AdvancedDatasetProcessor' object has no attribute 'process_wikipedia_dataset'"
+    },
+    {
+      "phase": 3,
+      "name": "Enhanced Internet Training",
+      "success": false,
+      "error": "No module named 'aiohttp'"
+    }
+  ],
+  "total_examples_added": 1189,
+  "success": false,
+  "end_time": "2025-11-19T10:14:12.013574",
+  "successful_phases": 1,
+  "total_phases": 3
+}
