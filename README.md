@@ -219,6 +219,15 @@ Customize ARK's responses using LoRA fine-tuning:
 
 See `fine_tune/README.md` for detailed instructions.
 
+## 📊 Training Data Available
+
+Want to know how much training data is available on the internet for ARK? Check out:
+
+- 📖 **[AVAILABLE_TRAINING_DATA.md](AVAILABLE_TRAINING_DATA.md)** - Comprehensive statistics and sources of 370+ million training examples
+- 📚 **[TRAINING_GUIDE.md](TRAINING_GUIDE.md)** - Complete guide to training ARK with existing datasets
+
+These documents provide detailed information about the vast amount of free and accessible training data available from sources like Hugging Face, Wikipedia, Stack Overflow, and more.
+
 ## 🏗️ Architecture
 
 ### Core Components
